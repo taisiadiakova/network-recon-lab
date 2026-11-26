@@ -6,7 +6,7 @@
 ```bash
 sudo nmap -sS -sV -oN scan_results.txt scanme.nmap.org
 ```
-<img src=./nmap_scan_result.png alt="Taisia Diakova — Nmap scanning output & saving report in scan_results.txt">
+<img src=./nmap_scan_result.png alt="Nmap scanning output & saving report in scan_results.txt">
 
 **Why use SYN Scan `-sS` instead of TCP Connect `-sT`:** A SYN scan sends a `SYN` packet, waits for `SYN-ACK` to confirm the port is open, and immediately sends `RST` without completing the 3-way handshake. Because a full TCP connection is never established, `-sS` is faster and leaves fewer traces in application-level logs compared to `-sT`.
 
